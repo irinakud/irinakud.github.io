@@ -1,0 +1,176 @@
+:root {
+  --tile-size: 400px;
+  --tile-image-size: 360px;
+  --navbar-color: white;
+  --navbar-text-color: black;
+  --welcome-color: #c5c5c5;
+  --welcome-text-color: black;
+  --arrow-color: #D71B47;
+  --project-tile-color: white;
+  --contacts-color: #c5c5c5;
+  --contacts-text-color: black;
+}
+
+body {
+  margin: 0px;
+  font-family: 'Montserrat', sans-serif;
+}
+a {
+  text-decoration: none;
+}
+#navbar {
+  position: fixed;
+  z-index: 1; /*to hide the arrow element*/
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  background: var(--navbar-color);
+  width: 100%;
+  text-align: right;
+  padding: 20px 40px 20px 20px;
+  border: solid var(--welcome-color);
+  border-width: 0 0 1px 0;
+}
+#nav-links {
+  margin-right: 20px;
+}
+.nav-link {
+  padding: 20px;
+  font-weight: bold;
+  color: var(--navbar-text-color);
+}
+a:hover {
+ text-decoration: underline;
+}
+#welcome-section {
+  background: var(--welcome-color);
+  text-align: center;
+  padding: 30px;
+}
+#welcome-text {
+  padding-top: 30px;
+  color: var(--welcome-text-color);
+}
+
+.rainbow-text {
+  background-image: repeating-linear-gradient(to right, indigo, blue, green, yellow, orange, red, violet, indigo, blue, green, yellow, orange, red, violet, indigo, blue, green, yellow, orange, red);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+   background-size: 400% 400%;
+ -webkit-animation: AnimationName 10s linear infinite running;
+    animation: AnimationName 10s linear infinite running;
+}
+
+@-webkit-keyframes AnimationName {
+  0%{background-position:0% 50%}
+  50%{background-position: 100% 50%}
+  100%{background-position:0% 50%}
+}
+@keyframes AnimationName {
+  0%{background-position:0% 50%}
+  50%{background-position: 100% 50%}
+  100%{background-position:0% 50%}
+}
+
+#welcome-text>h1 {
+  font-family: 'Caveat', cursive;
+  font-size: 60px;
+}
+a.anchor {
+  display: block;
+  position: relative;
+  top: -59px;
+  visibility: hidden;
+}
+#projects {
+  background: var(--navbar-color);
+  max-width: 1240px;
+  margin: auto;
+  padding: 20px 20px 40px 20px;
+}
+#projects-grid {
+  display: grid;
+  grid-gap: 20px;
+  grid-template-columns: var(--tile-size) var(--tile-size) var(--tile-size);
+}
+.project-tile {
+  background: var(--project-tile-color);
+  border-radius: 5px;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+  text-align: center;
+  padding-bottom: 10px;
+  color: var(--navbar-text-color);
+}
+.tile_image {
+  margin: 20px 20px 10px 20px;
+  max-width: var(--tile-image-size);
+  box-sizing: border-box;
+  border: solid 1px #aeaeae;
+}
+#contacts {
+  background: var(--contacts-color);
+  color: var(--contacts-text-color);
+  text-align: center;
+  padding: 30px; 
+}
+#contacts>h1 {
+  font-family: 'Caveat', cursive;
+  font-size: 30px;
+}
+#contacts>a{
+  color: var(--contacts-text-color);
+}
+.tech {
+  font-size: x-small;
+}
+.filterDiv {
+  display: none;
+}
+
+.show {
+  display: block;
+}
+
+#filters {
+  padding-bottom: 20px;
+}
+
+/* Style the buttons */
+.btn {
+  border: none;
+  outline: none;
+  padding: 12px 16px;
+  background-color: #f1f1f1;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background-color: #ddd;
+}
+
+.btn.active {
+  background-color: #666;
+  color: white;
+}
+@media (max-width: 1000px){
+  #projects-grid{
+    grid-template-columns: var(--tile-size) var(--tile-size);
+  }
+}
+@media (max-width: 600px){
+  #projects-grid{
+    grid-template-columns: var(--tile-size);
+  }
+}
+@media (max-width: 600px) {
+  body {
+    font-size: 10px;
+    --tile-size: 80vw;
+    --tile-image-size: 100%;
+  }
+}
+@media (max-height: 350px) {
+  #welcome-section {
+    height: 350px; 
+  }
+}
