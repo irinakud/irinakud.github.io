@@ -12,10 +12,10 @@ function App() {
         <a
           className="Tribute Page"
           href="https://irinakud.github.io/tribute-page"
-          target="_yop"
+          target="_top"
           rel="noopener noreferrer"
         >
-          Learn React
+          Tribute Page
         </a>
       </header>
     </div>
