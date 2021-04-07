@@ -2,70 +2,61 @@
   --tile-size: 400px;
   --welcome-color: white;
   --welcome-text-color: black;
-  --body-color: #f5f5f5;
-  --contacts-color: #c5c5c5;
-  --contacts-text-color: black;
+  --body-color: white;
+  --portfolio-max-width: 1240px;;
 }
-
 body {
-  margin: 0px;
   font-family: 'Montserrat', sans-serif;
   background: var(--body-color);
 }
+#contact-section {
+  float: right;
+  padding-top: 10px;
+}
+.contact-link {
+  color: rgba(0,0,0,.5);
+  padding-right: 3px;
+}
+.contact-link:hover {
+  color: rgba(0, 0, 0, 0.767);
+}
 #welcome-section {
   background: var(--welcome-color);
-  text-align: center;
-  margin-top: 56px;
-  padding: 30px;
+  max-width: var(--portfolio-max-width);
+  margin: auto;
 }
 #welcome-text {
   color: var(--welcome-text-color);
-}
-#welcome-text > h1 {
   font-family: 'Caveat', cursive;
+  margin-bottom: 40px;
+}
+#welcome-text>h1 {
   font-size: 60px;
 }
-
-a.anchor {
-  display: block;
-  position: relative;
-  top: -56px;
-  visibility: hidden;
+#about-text {
+  float: left;
 }
 #projects {
-  max-width: 1240px;
+  max-width: var(--portfolio-max-width);
   margin: auto;
-  padding: 20px 20px 40px 20px;
 }
 #projects-grid {
   display: grid;
-  grid-gap: 5px;
+  grid-gap: 20px;
   grid-template-columns: var(--tile-size) var(--tile-size) var(--tile-size);
 }
-
-#contacts {
-  background: var(--contacts-color);
-  color: var(--contacts-text-color);
-  text-align: center;
-  padding: 30px; 
-}
-#contacts>h1 {
-  font-family: 'Caveat', cursive;
-  font-size: 30px;
-}
-#contacts>a{
-  color: var(--contacts-text-color);
-}
+/* Style the filters */
 .filterDiv {
   display: none;
+  border: 1px solid rgb(0 0 0 / 40%);
 }
-
 .show {
   display: block;
 }
-
 #filters {
   padding-bottom: 20px;
+  margin: auto;
+  max-width: fit-content;
 }
 
 /* Style the buttons */
@@ -75,6 +66,7 @@ a.anchor {
   padding: 12px 16px;
   background-color: #f1f1f1;
   cursor: pointer;
+  margin-left: 10px;
 }
 
 .btn:hover {
@@ -101,5 +93,10 @@ a.anchor {
 @media (max-width: 600px){
   #projects-grid{
     grid-template-columns: var(--tile-size);
+  }
+}
+@media screen and (max-width: 400px){
+  :root {
+    --tile-size: 100%;
   }
 }

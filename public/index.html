@@ -1,71 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="theme-color" content="#000000" />
-    <meta
-      name="description"
-      content="Web site created using create-react-app"
-    />
-    <!--
-      manifest.json provides metadata used when your web app is installed on a
-      user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
-    -->
-    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
-    <link rel="stylesheet" href="%PUBLIC_URL%/index.css" />
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Caveat&family=Montserrat&display=swap">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css">
-    <!--
-      Notice the use of %PUBLIC_URL% in the tags above.
-      It will be replaced with the URL of the `public` folder during the build.
-      Only files inside the `public` folder can be referenced from the HTML.
 
-      Unlike "/favicon.ico" or "favicon.ico", "%PUBLIC_URL%/favicon.ico" will
-      work correctly both with client-side routing and a non-root public URL.
-      Learn how to configure a non-root public URL by running `npm run build`.
-    -->
-    <title>Portfolio</title>
-  </head>
-  <body>
-    <nav class="navbar fixed-top navbar-expand-sm navbar-dark bg-dark justify-content-end">
-      <ul class="navbar-nav">
-        <li class="nav-item active">
-          <a class="nav-link" href="#anchor_welcome-section">about</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#anchor_projects">portfolio</a>
-        </li>
-         <li class="nav-item">
-          <a class="nav-link" target="_top" href="mailto: irbaska@gmail.com"><i class="far fa-envelope"></i></a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" target="_top" href="https://www.linkedin.com/in/irina-kudryavtseva-6467884a/"><i class="fab fa-linkedin-in"></i></a>
-        </li>
-      </ul>
-  </nav>
-  
-  <a class="anchor" id="anchor_welcome-section"></a>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#000000" />
+  <meta name="description" content="Web site created using create-react-app" />
+  <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+  <link rel="stylesheet" href="%PUBLIC_URL%/index.css" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Caveat&family=Montserrat&display=swap">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+  <title>Irina's Portfolio</title>
+</head>
+
+<body>
   <div id="welcome-section">
+    <div id="contact-section">
+      <a class="contact-link" target="_top" href="mailto: irbaska@gmail.com"><i class="far fa-envelope"></i></a>
+      <a class="contact-link" target="_top" href="https://www.linkedin.com/in/irina-kudryavtseva-6467884a/"><i
+          class="fab fa-linkedin-in"></i></a>
+    </div>
     <div id="welcome-text">
       <h1>Hi, I am Irina</h1>
       <h1>I am a Front-End Developer</h1>
-      <h2>Here is my portfolio</h2>
+    </div>
+    <div id="about-text">
+      <h5>Here is my portfolio</h5>
     </div>
   </div>
-  <a class="anchor" id="anchor_projects"></a>
   <div id="projects">
     <div id="root">
       <!--PROJECTS TILES GO HERE-->
     </div>
-    </div>      
   </div>
-  <a class="anchor" id="anchor_contacts"></a>
-  <footer id="contacts">
-    <h1>Email me:</h1>
-    <a href = "mailto: irbaska@gmail.com" target="_top">irbaska@gmail.com</a>
-  </footer>
+  </div>
+</body>
 
-  </body>
 </html>

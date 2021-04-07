@@ -1,5 +1,5 @@
 export function filterSelection(c) {
-  if (c == "all") c = "";
+  if (c === "all") c = "";
   var filterDivs = document.getElementsByClassName("filterDiv");
   Array.prototype.forEach.call(filterDivs, function(mydiv) {
     removeClass(mydiv, "show");
@@ -12,7 +12,7 @@ function addClass(element, name) {
   arr1 = element.className.split(" ");
   arr2 = name.split(" ");
   Array.prototype.forEach.call(arr2, function(el) {
-    if (arr1.indexOf(el) == -1) {element.className += " " + el;}
+    if (arr1.indexOf(el) === -1) {element.className += " " + el;}
   });
 }
 
