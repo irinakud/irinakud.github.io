@@ -1,13 +1,105 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+:root {
+  --tile-size: 400px;
+  --welcome-color: white;
+  --welcome-text-color: black;
+  --body-color: #f5f5f5;
+  --contacts-color: #c5c5c5;
+  --contacts-text-color: black;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+body {
+  margin: 0px;
+  font-family: 'Montserrat', sans-serif;
+  background: var(--body-color);
+}
+#welcome-section {
+  background: var(--welcome-color);
+  text-align: center;
+  margin-top: 56px;
+  padding: 30px;
+}
+#welcome-text {
+  color: var(--welcome-text-color);
+}
+#welcome-text > h1 {
+  font-family: 'Caveat', cursive;
+  font-size: 60px;
+}
+
+a.anchor {
+  display: block;
+  position: relative;
+  top: -56px;
+  visibility: hidden;
+}
+#projects {
+  max-width: 1240px;
+  margin: auto;
+  padding: 20px 20px 40px 20px;
+}
+#projects-grid {
+  display: grid;
+  grid-gap: 5px;
+  grid-template-columns: var(--tile-size) var(--tile-size) var(--tile-size);
+}
+
+#contacts {
+  background: var(--contacts-color);
+  color: var(--contacts-text-color);
+  text-align: center;
+  padding: 30px; 
+}
+#contacts>h1 {
+  font-family: 'Caveat', cursive;
+  font-size: 30px;
+}
+#contacts>a{
+  color: var(--contacts-text-color);
+}
+.filterDiv {
+  display: none;
+}
+
+.show {
+  display: block;
+}
+
+#filters {
+  padding-bottom: 20px;
+}
+
+/* Style the buttons */
+.btn {
+  border: none;
+  outline: none;
+  padding: 12px 16px;
+  background-color: #f1f1f1;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background-color: #ddd;
+}
+
+.btn.activebtn {
+  background-color: #666;
+  color: white;
+}
+
+.jquery-icon {
+    background-image: url("img/icons/jquery-icon.png");
+    height: 16px;
+    width: 16px;
+    display: block;
+}
+
+@media (max-width: 1000px){
+  #projects-grid{
+    grid-template-columns: var(--tile-size) var(--tile-size);
+  }
+}
+@media (max-width: 600px){
+  #projects-grid{
+    grid-template-columns: var(--tile-size);
+  }
 }

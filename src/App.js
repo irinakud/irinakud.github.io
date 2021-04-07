@@ -1,25 +1,46 @@
-import logo from './logo.svg';
 import './App.css';
+import {projectsList} from './projectsList';
+import Project from './Project';
+import {filterSelection, activateFilterItem} from './Utils';
+import React from 'react';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="Tribute Page"
-          href="https://irinakud.github.io/tribute-page"
-          target="_top"
-          rel="noopener noreferrer"
-        >
-          Tribute Page
-        </a>
-      </header>
-    </div>
-  );
+class App extends React.Component {
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      projectsList: [...projectsList]
+    };
+  }
+
+  handleClick(e) {
+    console.log(e.target.value);
+    filterSelection(e.target.value);
+  }
+  
+  render () {
+    return(
+      <div>
+        <div id="filters">
+          <button className="btn activebtn" onClick={this.handleClick.bind(this)} value="all"> Show all</button>
+          <button className="btn" onClick={this.handleClick.bind(this)} value="javascript"> JavaScript</button>
+          <button className="btn" onClick={this.handleClick.bind(this)} value="react"> React</button>
+          <button className="btn" onClick={this.handleClick.bind(this)} value="bootstrap"> Bootstrap</button>
+          <button className="btn" onClick={this.handleClick.bind(this)} value="jquery"> jQuery</button>
+        </div>
+        <div id="projects-grid">
+          {this.state.projectsList.map((x, i) => {
+            return (<Project id={x.id} url={x.url} img_url={x.img_url} tech={x.tech} key={i} display="true"/>)
+            })}
+        </div>
+      </div>
+    );
+  }
+
+  componentDidMount() {
+    filterSelection('all');
+    activateFilterItem();
+  }
 }
 
 export default App;
