@@ -1,6 +1,6 @@
 import {projectsList} from './projectsList';
 import Project from './Project';
-import {filterSelection, activateFilterItem} from './Utils';
+import Filters from './Filters';
 import React from 'react';
 
 class Projects extends React.Component {
@@ -11,33 +11,24 @@ class Projects extends React.Component {
         projectsList: [...projectsList]
       };
     }
-  
-    handleClick(e) {
-      filterSelection(e.target.value);
+
+    updateProjectsList(newList) {
+        this.setState({
+            projectsList: newList
+        })
     }
     
     render () {
       return(
         <div>
-          <div id="filters">
-            <button className="btn activebtn" onClick={this.handleClick.bind(this)} value="all"> Show all</button>
-            <button className="btn" onClick={this.handleClick.bind(this)} value="javascript"> JavaScript</button>
-            <button className="btn" onClick={this.handleClick.bind(this)} value="react"> React</button>
-            <button className="btn" onClick={this.handleClick.bind(this)} value="bootstrap"> Bootstrap</button>
-            <button className="btn" onClick={this.handleClick.bind(this)} value="jquery"> jQuery</button>
-          </div>
+          <Filters updateProjectsList={this.updateProjectsList.bind(this)}/>
           <div id="projects-grid">
             {this.state.projectsList.map((x, i) => {
-              return (<Project id={x.id} url={x.url} img_url={x.img_url} tech={x.tech} key={i} display="true"/>)
+              return (<Project id={x.id} url={x.url} img_url={x.img_url} tech={x.tech} key={i}/>)
               })}
           </div>
         </div>
       );
-    }
-  
-    componentDidMount() {
-      filterSelection('all');
-      activateFilterItem();
     }
   }
   

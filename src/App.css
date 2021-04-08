@@ -36,7 +36,6 @@
   }
   /* Style the filters */
   .filterDiv {
-    display: none;
     border: 1px solid rgb(0 0 0 / 40%);
   }
   .show {
