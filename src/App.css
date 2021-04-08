@@ -38,9 +38,6 @@
   .filterDiv {
     border: 1px solid rgb(0 0 0 / 40%);
   }
-  .show {
-    display: block;
-  }
   #filters {
     padding-bottom: 20px;
     margin: auto;
@@ -72,7 +69,16 @@
       width: 16px;
       display: block;
   }
-  
+  .tech-icon {
+      margin-right:5px
+  }
+  .tech {
+    float: right;
+  }
+  .card-title{
+    text-align: center;
+  }
+
   @media (max-width: 1000px){
     #projects-grid{
       grid-template-columns: var(--tile-size) var(--tile-size);

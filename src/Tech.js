@@ -10,11 +10,12 @@ class Tech extends React.Component {
       
       return (           
         <div className="card-text tech">
-          { this.props.tech.includes('bootstrap') && <i className="fab fa-bootstrap"></i> }
-          { this.props.tech.includes('react') && <i className="fab fa-react"></i> }
-          { this.props.tech.includes('css') && <i className="fab fa-css3"></i> }
-          { this.props.tech.includes('html') && <i className="fab fa-html5"></i> }
-          { this.props.tech.includes('jquery') && <img style={styles} src='https://raw.githubusercontent.com/HappyMe777/portfolio/master/img/jquery-icon.png' alt=""/> }
+          { this.props.tech.includes('javascript') && <span className="tech-icon"><i className="fab fa-js"></i></span> }
+          { this.props.tech.includes('react') && <span className="tech-icon"><i className="fab fa-react"></i></span> }
+          { this.props.tech.includes('bootstrap') && <span className="tech-icon"><i className="fab fa-bootstrap"></i></span> }
+          {/* { this.props.tech.includes('css') && <span className="tech-icon"><i className="fab fa-css3"></i></span> }
+          { this.props.tech.includes('html') && <span className="tech-icon"><i className="fab fa-html5"></i></span> }  */}
+          { this.props.tech.includes('jquery') && <span className="tech-icon"><img style={styles} src='https://raw.githubusercontent.com/HappyMe777/portfolio/master/img/jquery-icon.png' alt=""/></span> }
           
         </div>
       );
