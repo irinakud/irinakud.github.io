@@ -1,46 +1,29 @@
 import './App.css';
-import {projectsList} from './projectsList';
-import Project from './Project';
-import {filterSelection, activateFilterItem} from './Utils';
+import Projects from './Projects';
 import React from 'react';
 
-class App extends React.Component {
-  constructor(props) {
-    super(props);
-
-    this.state = {
-      projectsList: [...projectsList]
-    };
-  }
-
-  handleClick(e) {
-    console.log(e.target.value);
-    filterSelection(e.target.value);
-  }
-  
-  render () {
-    return(
-      <div>
-        <div id="filters">
-          <button className="btn activebtn" onClick={this.handleClick.bind(this)} value="all"> Show all</button>
-          <button className="btn" onClick={this.handleClick.bind(this)} value="javascript"> JavaScript</button>
-          <button className="btn" onClick={this.handleClick.bind(this)} value="react"> React</button>
-          <button className="btn" onClick={this.handleClick.bind(this)} value="bootstrap"> Bootstrap</button>
-          <button className="btn" onClick={this.handleClick.bind(this)} value="jquery"> jQuery</button>
+const App = function() {
+  return(
+    <div>
+      <div id="welcome-section">
+        <div id="contact-section">
+          <a class="contact-link" target="_top" href="mailto: irbaska@gmail.com"><i class="far fa-envelope"></i></a>
+          <a class="contact-link" target="_top" href="https://www.linkedin.com/in/irina-kudryavtseva-6467884a/"><i
+              class="fab fa-linkedin-in"></i></a>
         </div>
-        <div id="projects-grid">
-          {this.state.projectsList.map((x, i) => {
-            return (<Project id={x.id} url={x.url} img_url={x.img_url} tech={x.tech} key={i} display="true"/>)
-            })}
+        <div id="welcome-text">
+          <h1>Hi, I am Irina</h1>
+          <h1>I am a Front-End Developer</h1>
+        </div>
+        <div id="about-text">
+          <h5>Here is my portfolio</h5>
         </div>
       </div>
-    );
-  }
-
-  componentDidMount() {
-    filterSelection('all');
-    activateFilterItem();
-  }
+      <div id="projects">
+        <Projects/>
+      </div>
+    </div>
+  );
 }
 
 export default App;
