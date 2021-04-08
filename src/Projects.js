@@ -8,7 +8,7 @@ class Projects extends React.Component {
       super(props);
   
       this.state = {
-        projectsList: [...projectsList]
+        projectsList: projectsList
       };
     }
 
