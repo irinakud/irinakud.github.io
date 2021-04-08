@@ -43,7 +43,7 @@ export const projectsList = [
   },
   {
     id: 'Documentation',
-    url: 'https://codepen.io/happy_me/full/GRJOyGb',
+    url: 'https://irinakud.github.io/documentation/',
     img_url: 'img/thumbnails/documentation.PNG',
     tech: 'html css'
   },
