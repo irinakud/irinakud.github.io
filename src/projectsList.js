@@ -31,7 +31,7 @@ export const projectsList = [
   },
   {
     id: 'Survey Form',
-    url: 'https://codepen.io/happy_me/full/XWJqbPb',
+    url: 'https://irinakud.github.io/survey/',
     img_url: 'img/thumbnails/survey.PNG',
     tech: 'html css'
   },
