@@ -13,7 +13,7 @@ export const projectsList = [
   },
   {
     id: 'Drum Machine',
-    url: 'https://codepen.io/happy_me/full/BapamVX',
+    url: 'https://irinakud.github.io/drum-machine/',
     img_url: 'img/thumbnails/drum.PNG',
     tech: 'html css javascript react bootstrap'
   },
