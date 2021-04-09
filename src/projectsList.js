@@ -25,7 +25,7 @@ export const projectsList = [
   },
   {
     id: 'Markdown Previewer',
-    url: 'https://codepen.io/happy_me/full/vYyvopM',
+    url: 'https://irinakud.github.io/markdown/',
     img_url: 'img/thumbnails/marked.PNG',
     tech: 'html css javascript react'
   },
