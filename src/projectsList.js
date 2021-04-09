@@ -19,7 +19,7 @@ export const projectsList = [
   },
   {
     id: 'Random Quotes Machine',
-    url: 'https://codepen.io/happy_me/full/OJbjeRK',
+    url: 'https://irinakud.github.io/quotes-machine/',
     img_url: 'img/thumbnails/quotes.PNG',
     tech: 'html css javascript react bootstrap jquery'
   },
