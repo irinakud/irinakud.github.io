@@ -37,7 +37,7 @@ export const projectsList = [
   },
   {
     id: 'Product Landing Page',
-    url: 'https://codepen.io/happy_me/full/PowLNGQ',
+    url: 'https://irinakud.github.io/landing-page/',
     img_url: 'img/thumbnails/product-landing.PNG',
     tech: 'html css'
   },
