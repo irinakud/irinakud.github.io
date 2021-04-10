@@ -1,7 +1,7 @@
 export const projectsList = [
   {
     id: '25 + 5 Clock',
-    url: 'https://codepen.io/happy_me/full/JjERxxO',
+    url: 'https://irinakud.github.io/clock/',
     img_url: 'img/thumbnails/clock.PNG',
     tech: 'html css javascript react bootstrap'
   },
