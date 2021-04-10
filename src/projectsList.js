@@ -7,7 +7,7 @@ export const projectsList = [
   },
   {
     id: 'JavaScript Calculator',
-    url: 'https://codepen.io/happy_me/full/qBRbJNK',
+    url: 'https://irinakud.github.io/calculator/',
     img_url: 'img/thumbnails/calculator.PNG',
     tech: 'html css javascript react'
   },
