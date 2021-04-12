@@ -15,9 +15,6 @@ const App = function() {
           <h1>Hi, I am Irina</h1>
           <h1>I am a Front-End Developer</h1>
         </div>
-        <div id="about-text">
-          <h5>Here is my portfolio</h5>
-        </div>
       </div>
       <div id="projects">
         <Projects/>

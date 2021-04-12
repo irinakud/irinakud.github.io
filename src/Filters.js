@@ -1,4 +1,4 @@
-import {projectsList} from './projectsList';
+import { projectsList } from './projectsList';
 import React from 'react';
 
 const filters = [
@@ -20,7 +20,7 @@ const filters = [
     {
         value: "bootstrap",
         name: "Bootstrap",
-        active: false   
+        active: false
     },
     {
         value: "jquery",
@@ -31,51 +31,63 @@ const filters = [
 
 class Filters extends React.Component {
     constructor(props) {
-      super(props);
+        super(props);
 
-      this.state = {
-          filters: filters      
+        this.state = {
+            filters: filters
         }
     }
 
     activateFilter(selectedFilter) {
-        let activatedFilters = filters;    
-        activatedFilters.forEach( filter => {
-            if(filter.active)
+        let activatedFilters = filters;
+        activatedFilters.forEach(filter => {
+            if (filter.active)
                 filter.active = false;
-            if(filter.value===selectedFilter)
+            if (filter.value === selectedFilter)
                 filter.active = true;
         });
         this.setState({
-                filters: activatedFilters
-            });
+            filters: activatedFilters
+        });
     }
 
     filterProjectsList(selection) {
         if (selection === "all")
-          return [...projectsList];
+            return [...projectsList];
         return projectsList.filter(project => project.tech.indexOf(selection) > -1);
     }
-  
+
     handleClick(e) {
         const newList = this.filterProjectsList(e.target.value);
         this.props.updateProjectsList(newList);
         this.activateFilter(e.target.value);
     }
-    
-    render () {
-      return(
-        <div id="filters">
-            {this.state.filters.map((x, i) => {
-              return (<button className={x.active ? "btn activebtn" : "btn"} onClick={this.handleClick.bind(this)} value={x.value} key={i}> {x.name}</button>)
-              })}
-        </div>
-      );
+
+    render() {
+        return (
+            <div id="filters">
+                <div className="filter-buttons">
+                    {this.state.filters.map((x, i) => {
+                        return (<button className={x.active ? "btn btn-light active-filter" : "btn btn-light"} onClick={this.handleClick.bind(this)} value={x.value} key={i}> {x.name}</button>)
+                    })}
+                </div>
+                <div className="filter-dropdown">
+                    <div className="dropdown">
+                        <button className="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Filter</button>
+                        <div className="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                            {this.state.filters.map((x, i) => {
+                                return (<button className={x.active ? "dropdown-item active-filter" : "dropdown-item"} key={i} onClick={this.handleClick.bind(this)} value={x.value}> {x.name}</button>)
+                            })}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        );
     }
-  }
-  
-  export default Filters;
-  
+}
+
+export default Filters;
+
 
 
 

@@ -21,7 +21,10 @@ class Projects extends React.Component {
     render () {
       return(
         <div>
-          <Filters updateProjectsList={this.updateProjectsList.bind(this)}/>
+          <div className="filters-container">
+            <div id="filter-label"><h5>Here is my portfolio</h5></div>
+            <Filters updateProjectsList={this.updateProjectsList.bind(this)}/>
+          </div>
           <div id="projects-grid">
             {this.state.projectsList.map((x, i) => {
               return (<Project id={x.id} url={x.url} img_url={x.img_url} tech={x.tech} key={i}/>)
