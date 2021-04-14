@@ -4,7 +4,7 @@
   }
   .contact-link {
     color: rgba(0,0,0,.5);
-    padding-right: 3px;
+    padding-right: 10px;
   }
   .contact-link:hover {
     color: rgba(0, 0, 0, 0.767);
@@ -76,6 +76,11 @@
   }
   .filter-buttons {
     display: block;
+  }
+  .dropdown-item:focus{
+    color: #212529;
+    background-color: #e2e6ea;
+    border-color: #dae0e5;
   }
   @media (max-width: 1240px){
     :root {
