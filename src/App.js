@@ -13,7 +13,7 @@ const App = function() {
         </div>
         <div id="welcome-text">
           <h1>Hi, I am Irina</h1>
-          <h1>I am a Front-End Developer</h1>
+          <h1>I am a Software Developer</h1>
         </div>
       </div>
       <div id="projects">

@@ -9,3 +9,6 @@ body {
   font-family: 'Montserrat', sans-serif;
   background: var(--body-color);
 }
+#root {
+  margin: 10px;
+}
