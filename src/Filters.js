@@ -8,6 +8,11 @@ const filters = [
         active: true
     },
     {
+        value: "htmlcss",
+        name: "HTML/CSS",
+        active: false
+    },
+    {
         value: "javascript",
         name: "JavaScript",
         active: false
@@ -25,6 +30,16 @@ const filters = [
     {
         value: "jquery",
         name: "jQuery",
+        active: false
+    },
+    {
+        value: "cpp",
+        name: "C++",
+        active: false
+    },
+    {
+        value: "qt",
+        name: "Qt",
         active: false
     }
 ];
